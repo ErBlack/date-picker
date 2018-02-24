@@ -1,0 +1,122 @@
+<style class="main">
+    :host {
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+
+        --color-backgroound: #0D56A6;
+        --color-border: #689AD3;
+        --color-hover: #DFEDFC;
+    }
+
+    .calendar {
+        position: absolute;
+        left: 0;
+        z-index: 100;
+
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-top: 5px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: solid 1px var(--color-border);
+        border-bottom: none;
+    }
+
+    .arrow {
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        width: 30px;
+        height: 24px;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+    }
+
+    .month {
+        font-size: 14px;
+    }
+
+    .daynames {
+        display: flex;
+        background-color: var(--color-backgroound);
+        color: white;
+        padding: 0 6px;
+    }
+
+    .day {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .days {
+        border: solid 1px var(--color-border);
+        border-top: none;
+        box-sizing: border-box;
+    }
+
+    .grid {
+        position: relative;
+        margin: 0 5px 5px;
+    }
+
+    .grid .day {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    .d_0,
+    .d_6 {
+        color: rgba(0, 0, 0, .6)
+    }
+
+    .today {
+        font-weight: bold;
+    }
+
+    .selected {
+        cursor: default;
+        border: dashed 1px var(--color-border)
+    }
+
+    .arrow:hover,
+    .grid .day:hover {
+        background-color: var(--color-hover);
+    }
+</style>
+<input type="text" placeholder="MM-DD-YYYY" />
+<div class="calendar hidden">
+    <div class="header">
+        <div class="arrow prev">&larr;</div>
+        <div class="month"></div>
+        <div class="arrow next">&rarr;</div>
+    </div>
+    <div class="daynames">
+        <span class="day">Mo</span>
+        <span class="day">Tu</span>
+        <span class="day">We</span>
+        <span class="day">Th</span>
+        <span class="day">Fr</span>
+        <span class="day">Sa</span>
+        <span class="day">Su</span>
+    </div>
+    <div class="days">
+        <div class="grid"></div>
+    </div>
+</div>

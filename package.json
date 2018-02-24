@@ -1,0 +1,30 @@
+{
+  "name": "date-picker",
+  "version": "0.0.1",
+  "description": "Web components datepicker sample",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ErBlack/date-picker.git"
+  },
+  "keywords": [
+    "web",
+    "components",
+    "datepicker"
+  ],
+  "author": "ErBlack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErBlack/date-picker/issues"
+  },
+  "homepage": "https://github.com/ErBlack/date-picker#readme",
+  "devDependencies": {
+    "moment": "^2.20.1",
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "scripts": {
+    "build:native": "webpack --context ./example_native --config ./example_native/webpack.config.js --output-path ./example_native"
+  }
+}
