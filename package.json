@@ -28,6 +28,6 @@
     "start:native": "cd ./example_native && webpack-dev-server",
     "start:react": "cd ./example_react && webpack-dev-server",
     "start:vue": "cd ./example_vue &&  webpack-dev-server",
-    "build:native": "webpack --context ./example_native --config ./example_native/webpack.config.js --output-path ./example_native"
+    "install": "cd ./example_react && npm install"
   }
 }
