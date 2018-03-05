@@ -1,7 +1,17 @@
 <html>
 
 <head>
-
+    <script>
+        if (!(
+            'registerElement' in document &&
+            'import' in document.createElement('link') &&
+            'content' in document.createElement('template')
+        )) {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@1.1.0/webcomponents-lite.min.js';
+            document.head.appendChild(script);
+        }
+    </script>
 </head>
 
 <body>
