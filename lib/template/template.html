@@ -2,10 +2,6 @@
     :host {
         position: relative;
         font-family: Arial, Helvetica, sans-serif;
-
-        --color-backgroound: #0D56A6;
-        --color-border: #689AD3;
-        --color-hover: #DFEDFC;
     }
 
     .calendar {
@@ -28,7 +24,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: solid 1px var(--color-border);
+        border: solid 1px #689AD3;
         border-bottom: none;
     }
 
@@ -49,7 +45,7 @@
 
     .daynames {
         display: flex;
-        background-color: var(--color-backgroound);
+        background-color: #0D56A6;
         color: white;
         padding: 0 6px;
     }
@@ -65,7 +61,7 @@
     }
 
     .days {
-        border: solid 1px var(--color-border);
+        border: solid 1px #689AD3;
         border-top: none;
         box-sizing: border-box;
     }
@@ -92,12 +88,12 @@
 
     .selected {
         cursor: default;
-        border: dashed 1px var(--color-border)
+        border: dashed 1px #689AD3
     }
 
     .arrow:hover,
     .grid .day:hover {
-        background-color: var(--color-hover);
+        background-color: #DFEDFC;
     }
 </style>
 <input type="text" placeholder="MM-DD-YYYY" />
