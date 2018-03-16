@@ -1,3 +1,12 @@
 require('../lib/DatePicker');
 
-document.querySelector('date-picker').value = '10-12-88';
+window.EXAMPLE = document.querySelector('date-picker');
+
+EXAMPLE.addEventListener('change', function(e) {
+    const {
+        target,
+        detail
+    } = e;
+
+    console.log(`date changed to ${target.value} (${detail})`);
+})

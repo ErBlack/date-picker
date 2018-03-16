@@ -7,5 +7,10 @@ module.exports = {
         rules: [
             {test: /\.html$/, use: 'raw-loader'}
         ]
+    },
+    resolve: {
+        alias: {
+            'vue': 'vue/dist/vue.common.js'
+        }
     }
 };

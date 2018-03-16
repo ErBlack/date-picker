@@ -1,10 +1,9 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-
-require('../lib/DatePicker');
+const Component = require('./Component');
 
 ReactDOM.render(
-    <date-picker value="02-25-2018"></date-picker>,
+    <Component value="03-17-2018" />,
     document.getElementById('component')
 );
 

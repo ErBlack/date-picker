@@ -25,9 +25,15 @@
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
+    "build": "npm run build:native && npm run build:react && npm run build:vue",
+    "build:native": "cd ./example_native && webpack",
+    "build:react": "cd ./example_react && webpack",
+    "build:vue": "cd ./example_vue &&  webpack",
     "start:native": "cd ./example_native && webpack-dev-server",
     "start:react": "cd ./example_react && webpack-dev-server",
     "start:vue": "cd ./example_vue &&  webpack-dev-server",
-    "install": "cd ./example_react && npm install"
+    "install": "npm run install:react && npm run install:vue",
+    "install:react": "cd ./example_react && npm install",
+    "install:vue": "cd ./example_vue && npm install"
   }
 }
